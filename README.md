@@ -23,17 +23,13 @@ python3 -m http.server 8000 --directory website
 
 Open http://localhost:8000. Edit files in `website/` directly. Do not put credentials or internal documents in that directory.
 
-## Team review
+## Deployment
 
-Keep the repository private during review. Team members with repository access can clone it and run the preview command above. Validation runs on pushes and pull requests; deployment is skipped while the repository is private.
+The website is live at **https://globaledgeailab.com/**. This repository is public and GitHub Pages uses the **GitHub Actions** publishing source.
 
-## Publish on 1 December 2026
+Pushes to `main` validate and deploy `website/` automatically. Pull requests validate without publishing. To redeploy manually, open **Actions → Validate and deploy website → Run workflow** on `main`.
 
-1. Under **Settings → General → Danger Zone**, change repository visibility to **Public**.
-2. Under **Settings → Pages → Build and deployment**, select **GitHub Actions**.
-3. Under **Actions → Validate and deploy website**, select **Run workflow** on `main`.
-
-After launch, pushes to `main` validate and deploy automatically. Pull requests validate without publishing. Changing visibility alone does not publish the website, and no scheduled visibility change is configured.
+For review, create a branch or pull request and run the local preview command above. Revert a commit on `main` to roll back a website change. Deployment is skipped if the repository is made private.
 
 ## Custom domain
 
