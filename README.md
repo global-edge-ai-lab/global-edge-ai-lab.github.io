@@ -35,4 +35,16 @@ Keep the repository private during review. Team members with repository access c
 
 After launch, pushes to `main` validate and deploy automatically. Pull requests validate without publishing. Changing visibility alone does not publish the website, and no scheduled visibility change is configured.
 
-Configure the custom domain and HTTPS in the repository's Pages settings.
+## Custom domain
+
+The production domain is `globaledgeailab.com`; `www.globaledgeailab.com` should redirect to it. The `website/CNAME` file records this choice, but an Actions deployment also requires setting the domain in **Settings → Pages → Custom domain**.
+
+Before launch, an organization owner can verify `globaledgeailab.com` under the **organization's Settings → Pages** using GitHub's generated TXT record. Keep that TXT record permanently.
+
+After Pages is enabled and the initial deployment succeeds:
+
+1. Set `globaledgeailab.com` as the custom domain in the repository's Pages settings.
+2. Replace the GoDaddy parked `A` record with four `A` records for `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`.
+3. Change the `www` CNAME target to `global-edge-ai-lab.github.io`. Preserve other DNS records.
+4. Wait for GitHub's DNS check and HTTPS certificate, then enable **Enforce HTTPS**.
+5. Verify the bare domain, the `www` redirect, and all three pages over HTTPS.
