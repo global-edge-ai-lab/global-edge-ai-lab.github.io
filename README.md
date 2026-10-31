@@ -5,7 +5,7 @@ Official static website for the Global Edge AI Lab at LUMS. Plain HTML, CSS and 
 ## Repository layout
 
 ```text
-website/            Three public pages and optimized images
+website/            Five public pages and optimized images
 scripts/            Dependency-free site validation
 .github/workflows/  Validation and GitHub Pages deployment
 ```
@@ -43,4 +43,4 @@ After Pages is enabled and the initial deployment succeeds:
 2. Replace the GoDaddy parked `A` record with four `A` records for `@`: `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, and `185.199.111.153`.
 3. Change the `www` CNAME target to `global-edge-ai-lab.github.io`. Preserve other DNS records.
 4. Wait for GitHub's DNS check and HTTPS certificate, then enable **Enforce HTTPS**.
-5. Verify the bare domain, the `www` redirect, and all three pages over HTTPS.
+5. Verify the bare domain, the `www` redirect, and all five pages over HTTPS.

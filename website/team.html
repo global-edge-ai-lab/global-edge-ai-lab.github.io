@@ -203,6 +203,25 @@ a{color:#127480}a:hover{color:#0D5961}
 .join h3{color:#fff}
 .join p{color:#D3DCDA}
 .team-hero .net-fade{background:linear-gradient(90deg,rgba(8,17,20,.95) 0%,rgba(8,17,20,.75) 45%,rgba(8,17,20,0) 75%)}
+/* Team layout: 1 - 3 - 3 */
+.grid > .card:nth-child(1){grid-column:3 / span 2}
+.grid > .card:nth-child(2){grid-column:1 / span 2}
+.grid > .card:nth-child(6){grid-column:span 2}
+@media (max-width:1000px){.grid > .card:nth-child(1),.grid > .card:nth-child(2),.grid > .card:nth-child(6){grid-column:auto}}
+/* ===== Contact band ===== */
+.contact-band{position:relative;padding:64px 0 60px;background:linear-gradient(var(--grid) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/48px 48px,radial-gradient(700px 260px at 85% 0%,rgba(31,160,174,.16),transparent 70%),#081114}
+.contact-band::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(31,160,174,.6) 30%,rgba(246,218,107,.6) 70%,transparent)}
+.cb-head{max-width:640px;margin-bottom:28px}
+.cb-head h2{color:#fff;margin:0 0 .35em}
+.cb-head p{margin:0;color:#D3DCDA}
+.cb-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.cb-item{display:flex;flex-direction:column;gap:8px;padding:20px 22px;border-radius:4px;border:1px solid rgba(127,227,232,.18);background:linear-gradient(180deg,rgba(20,40,44,.7),rgba(10,22,25,.7));text-decoration:none;transition:border-color .25s ease,box-shadow .25s ease}
+.cb-k{font-family:var(--mono);font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#7FE3E8}
+.cb-v{color:#fff;font-size:.95rem;line-height:1.55;overflow-wrap:anywhere}
+.site a.cb-mail .cb-v{color:#F6DA6B}
+.site a.cb-mail:hover{border-color:#F6DA6B;box-shadow:0 0 24px -8px rgba(246,218,107,.6)}
+.site a.cb-mail:hover .cb-v{color:#F6DA6B}
+@media (max-width:860px){.cb-grid{grid-template-columns:1fr}}
 
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -223,10 +242,10 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}
     <input type="checkbox" id="navtoggle2" class="navtoggle" aria-label="Open menu">
     <label for="navtoggle2" class="burger" aria-hidden="true"><i></i><i></i><i></i></label>
     <ul class="menu">
-      <li><a href="index.html#top">Home</a></li>
-      <li><a href="index.html#about">About</a></li>
-      <li><a href="how-it-works.html">How it works</a></li>
-      <li><a href="index.html#partners">Partners</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="launch.html">Launch</a></li>
+      <li><a href="how-it-works.html">How the Lab works</a></li>
+      <li><a href="partners.html">Partners</a></li>
       <li><a class="on" href="team.html" aria-current="page">Team</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -391,7 +410,22 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}
 </section>
 </main>
 
-<footer class="foot-wrap" id="contact">
+<section class="contact-band" id="contact" aria-labelledby="contact-h">
+  <div class="wrap">
+    <div class="cb-head">
+      <span class="eyebrow">Contact</span>
+      <h2 id="contact-h" style="font-size: 30px; font-weight: 700">Get in touch</h2>
+      <p>For partnerships, the launch or testing a model, write to us.</p>
+    </div>
+    <div class="cb-grid">
+      <a class="cb-item cb-mail" href="mailto:globaledgeailab@lums.edu.pk"><span class="cb-k">Email</span><span class="cb-v">globaledgeailab@lums.edu.pk</span></a>
+      <div class="cb-item"><span class="cb-k">Phone</span><span class="cb-v">+92 42 3560 8000<br>UAN +92 42 111 11 LUMS (5867)</span></div>
+      <div class="cb-item"><span class="cb-k">Address</span><span class="cb-v">Lahore University of Management Sciences<br>DHA, Lahore Cantt, 54792, Pakistan</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot-wrap">
   <div class="wrap">
     <div class="foot">
       <div>
@@ -406,7 +440,7 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}
       </div>
       <div>
         <h3>Explore</h3>
-        <p><a href="index.html#launch">Bangkok launch</a><br><a href="index.html#about">About the Lab</a><br><a href="how-it-works.html">How it works</a><br><a href="index.html#partners">Partners</a><br><a href="team.html">Our team</a></p>
+        <p><a href="launch.html">Launch</a><br><a href="index.html#about">About the Lab</a><br><a href="how-it-works.html">How the Lab works</a><br><a href="partners.html">Partners</a><br><a href="team.html">Our team</a></p>
         <p><a href="https://lums.edu.pk">www.lums.edu.pk</a></p>
       </div>
     </div>

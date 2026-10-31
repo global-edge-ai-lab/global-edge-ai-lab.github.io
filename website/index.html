@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Global Edge AI Lab | LUMS</title>
-<meta name="description" content="The Global Edge AI Lab at LUMS tests AI for health and education on the low-cost phones people actually use. Launching in Bangkok, 29 November to 1 December 2026.">
+<meta name="description" content="The Global Edge AI Lab at LUMS tests AI for health and education on the low-cost phones people actually use. Launching in Bangkok on 1 December 2026.">
 <link rel="canonical" href="https://globaledgeailab.com/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Global Edge AI Lab">
 <meta property="og:title" content="Global Edge AI Lab | LUMS">
-<meta property="og:description" content="The Global Edge AI Lab at LUMS tests AI for health and education on the low-cost phones people actually use. Launching in Bangkok, 29 November to 1 December 2026.">
+<meta property="og:description" content="The Global Edge AI Lab at LUMS tests AI for health and education on the low-cost phones people actually use. Launching in Bangkok on 1 December 2026.">
 <meta property="og:url" content="https://globaledgeailab.com/">
 <meta property="og:image" content="https://globaledgeailab.com/images/launch-kv.jpg">
 <meta property="og:image:width" content="1280">
@@ -17,7 +17,7 @@
 <meta property="og:image:alt" content="Global Edge AI Lab launch event visual">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Global Edge AI Lab | LUMS">
-<meta name="twitter:description" content="The Global Edge AI Lab at LUMS tests AI for health and education on the low-cost phones people actually use. Launching in Bangkok, 29 November to 1 December 2026.">
+<meta name="twitter:description" content="The Global Edge AI Lab at LUMS tests AI for health and education on the low-cost phones people actually use. Launching in Bangkok on 1 December 2026.">
 <meta name="twitter:image" content="https://globaledgeailab.com/images/launch-kv.jpg">
 <link rel="icon" type="image/png" sizes="32x32" href="images/logo/favicon-32.png">
 <link rel="apple-touch-icon" href="images/logo/apple-touch-icon.png">
@@ -544,6 +544,20 @@ a{color:#127480}a:hover{color:#0D5961}
 /* launch key visual inside Read more */
 .launch-kv{grid-column:1 / -1;margin:0;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px rgba(127,227,232,.3),0 0 30px -8px rgba(31,160,174,.6)}
 .launch-kv img{display:block;width:100%;height:auto;aspect-ratio:16/9}
+/* ===== Contact band ===== */
+.contact-band{position:relative;padding:64px 0 60px;background:linear-gradient(var(--grid) 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/48px 48px,radial-gradient(700px 260px at 85% 0%,rgba(31,160,174,.16),transparent 70%),#081114}
+.contact-band::before{content:"";position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(31,160,174,.6) 30%,rgba(246,218,107,.6) 70%,transparent)}
+.cb-head{max-width:640px;margin-bottom:28px}
+.cb-head h2{color:#fff;margin:0 0 .35em}
+.cb-head p{margin:0;color:#D3DCDA}
+.cb-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.cb-item{display:flex;flex-direction:column;gap:8px;padding:20px 22px;border-radius:4px;border:1px solid rgba(127,227,232,.18);background:linear-gradient(180deg,rgba(20,40,44,.7),rgba(10,22,25,.7));text-decoration:none;transition:border-color .25s ease,box-shadow .25s ease}
+.cb-k{font-family:var(--mono);font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:#7FE3E8}
+.cb-v{color:#fff;font-size:.95rem;line-height:1.55;overflow-wrap:anywhere}
+.site a.cb-mail .cb-v{color:#F6DA6B}
+.site a.cb-mail:hover{border-color:#F6DA6B;box-shadow:0 0 24px -8px rgba(246,218,107,.6)}
+.site a.cb-mail:hover .cb-v{color:#F6DA6B}
+@media (max-width:860px){.cb-grid{grid-template-columns:1fr}}
 
 html{scroll-behavior:smooth;scroll-padding-top:76px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -565,9 +579,9 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}
     <label for="navtoggle" class="burger" aria-hidden="true"><i></i><i></i><i></i></label>
     <ul class="menu">
       <li><a href="#top">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="how-it-works.html">How it works</a></li>
-      <li><a href="#partners">Partners</a></li>
+      <li><a href="launch.html">Launch</a></li>
+      <li><a href="how-it-works.html">How the Lab works</a></li>
+      <li><a href="partners.html">Partners</a></li>
       <li><a href="team.html">Team</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -916,10 +930,10 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}
       <div class="launch-band">
         <div>
           <h2 id="launch-h" class="holo-title">Global Launch</h2>
-          <p class="launch-when">Bangkok · 29 Nov – 1 Dec 2026</p>
-          <p class="launch-sub">Centara Grand at CentralWorld, alongside the Global Digital Health Forum (2–4 Dec).</p>
+          <p class="launch-when">Bangkok · Tuesday 1 December 2026</p>
+          <p class="launch-sub">Centara Grand at CentralWorld, co-hosted with the Global Digital Health Forum.</p>
           <p class="launch-mail">Enquiries: <a href="mailto:globaledgeailab@lums.edu.pk">globaledgeailab@lums.edu.pk</a></p>
-          <button type="button" class="launch-more" id="launch-toggle" aria-expanded="false" aria-controls="launch-details">Read more about the launch ↓</button>
+          <a class="launch-more" href="launch.html">Read more about the launch →</a>
         </div>
         <div>
           <div class="countdown" id="countdown" aria-live="polite">
@@ -930,22 +944,6 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}
         <p class="cd-note" id="cd-note">until the launch opens (Bangkok time)</p>
         </div>
       </div>
-
-      <div class="launch-more-panel" id="launch-details" hidden>
-          <figure class="launch-kv"><img loading="lazy" decoding="async" src="images/launch-kv.jpg" alt="Global Edge AI Lab Launch 2026 key visual, with the LUMS, Gates Foundation and Global Edge AI Lab logos"></figure>
-          <div>
-            <h3>A three-day launch</h3>
-            <p>The Lab's three-day launch takes place at the Centara Grand at CentralWorld, Bangkok, co-located with the Global Digital Health Forum (2–4 December).</p>
-            <p>The launch meetings in Bangkok will help shape the testbed, the device cohort and the certification protocol, giving the partners and communities the Lab is meant to serve a voice in how it is built.</p>
-          </div>
-          <div>
-            <h3>Dates and venue</h3>
-            <ol class="timeline">
-              <li><span class="d">29 November – 1 December 2026</span><p>Global Edge AI Lab launch, Centara Grand at CentralWorld, Bangkok</p></li>
-              <li class="forum"><span class="d">2 – 4 December 2026</span><p>Global Digital Health Forum, co-located at the same venue</p></li>
-            </ol>
-          </div>
-        </div>
     </div>
     </div>
 
@@ -981,6 +979,10 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}
 
   </div>
 </section>
+
+
+
+
 
 
 
@@ -1022,38 +1024,24 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}
   </div>
 </section>
 
-<section class="sec partners" id="partners" aria-labelledby="partners-h">
+</main>
+
+<section class="contact-band" id="contact" aria-labelledby="contact-h">
   <div class="wrap">
-    <span class="eyebrow">Partners</span>
-    <h2 id="partners-h" style="font-size: 30px; font-weight: 700">A network across the Global South</h2>
-    <p class="lede">The testbed is anchored at LUMS, with regional nodes at the Africa AI Hubs. Each brings its own devices, languages and deployments.</p>
-    <div class="map">
-      <img loading="lazy" decoding="async" class="map-dots" src="images/map-dots.svg" alt="">
-      <svg class="map-links" viewBox="0 0 1072 640" aria-hidden="true">
-        <path class="arc" d="M771 100 Q 590 130 416 368" stroke="#4DA790"></path>
-        <path class="arc" d="M771 100 Q 500 70 236 280" stroke="#B8B74B" style="animation-delay: .6s;"></path>
-        <path class="arc" d="M771 100 Q 400 -10 36 234" stroke="#E4BA00" style="animation-delay: 1.2s;"></path>
-        <path class="arc launch-arc" d="M771 100 Q 900 110 980 242" stroke="#141414"></path>
-        <circle class="ring" cx="771" cy="100" r="16"></circle>
-        <circle cx="771" cy="100" r="9" fill="#1FA0AE"></circle>
-        <circle cx="416" cy="368" r="8" fill="#4DA790"></circle>
-        <circle cx="236" cy="280" r="8" fill="#B8B74B"></circle>
-        <circle cx="36" cy="234" r="8" fill="#E4BA00"></circle>
-        <circle cx="980" cy="242" r="7" fill="#fff" stroke="#141414" stroke-width="3"></circle>
-      </svg>
-      <span class="pin-label" style="left: 71.9%; top: 15.6%;"><b>LUMS, Lahore</b>Testbed hub</span>
-      <span class="pin-label" style="left: 38.9%; top: 57.4%;"><b>Rwanda</b>Africa AI Hub</span>
-      <span class="pin-label" style="left: 22%; top: 43.7%;"><b>Nigeria</b>Africa AI Hub</span>
-      <span class="pin-label" style="left: 3.4%; top: 36.6%;"><b>Senegal</b>Africa AI Hub</span>
-      <span class="pin-label dark" style="left: 91.4%; top: 37.8%;"><b>Bangkok</b>Launch, Nov 2026</span>
+    <div class="cb-head">
+      <span class="eyebrow">Contact</span>
+      <h2 id="contact-h" style="font-size: 30px; font-weight: 700">Get in touch</h2>
+      <p>For partnerships, the launch or testing a model, write to us.</p>
     </div>
-    <p class="funded">Funded by the Gates Foundation</p>
+    <div class="cb-grid">
+      <a class="cb-item cb-mail" href="mailto:globaledgeailab@lums.edu.pk"><span class="cb-k">Email</span><span class="cb-v">globaledgeailab@lums.edu.pk</span></a>
+      <div class="cb-item"><span class="cb-k">Phone</span><span class="cb-v">+92 42 3560 8000<br>UAN +92 42 111 11 LUMS (5867)</span></div>
+      <div class="cb-item"><span class="cb-k">Address</span><span class="cb-v">Lahore University of Management Sciences<br>DHA, Lahore Cantt, 54792, Pakistan</span></div>
+    </div>
   </div>
 </section>
 
-</main>
-
-<footer class="foot-wrap" id="contact">
+<footer class="foot-wrap">
   <div class="wrap">
     <div class="foot">
       <div>
@@ -1068,7 +1056,7 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}
       </div>
       <div>
         <h3>Explore</h3>
-        <p><a href="#launch">Bangkok launch</a><br><a href="#about">About the Lab</a><br><a href="how-it-works.html">How it works</a><br><a href="#partners">Partners</a><br><a href="team.html">Our team</a></p>
+        <p><a href="launch.html">Launch</a><br><a href="#about">About the Lab</a><br><a href="how-it-works.html">How the Lab works</a><br><a href="partners.html">Partners</a><br><a href="team.html">Our team</a></p>
         <p><a href="https://lums.edu.pk">www.lums.edu.pk</a></p>
       </div>
     </div>
@@ -1078,13 +1066,13 @@ html{scroll-behavior:smooth;scroll-padding-top:76px}
   </div>
 </footer>
 </div>
-<script>window.REVEAL_SEL=".sec .eyebrow, .sec h2, .sec .lede, .bigstat, .quote, .why-media, .map, .funded";</script>
+<script>window.REVEAL_SEL=".sec .eyebrow, .sec h2, .sec .lede, .bigstat, .quote, .why-media";</script>
 <script>
 (function(){
   var mm=function(q){return window.matchMedia?window.matchMedia(q).matches:false;};
   var reduce=mm('(prefers-reduced-motion: reduce)'), fine=mm('(hover: hover) and (pointer: fine)');
-  // Countdown to 29 Nov 2026, 09:00 Bangkok (UTC+7). Opening time [Confirm].
-  var target=Date.UTC(2026,10,29,2,0,0), box=document.getElementById('countdown');
+  // Countdown to 1 Dec 2026, 09:00 Bangkok (UTC+7), when the opening remarks start.
+  var target=Date.UTC(2026,11,1,2,0,0), box=document.getElementById('countdown');
   var d=document.getElementById('cd-d'),h=document.getElementById('cd-h'),m=document.getElementById('cd-m'),n=document.getElementById('cd-note');
   function tick(){var ms=target-Date.now();
     if(ms<=0){box.style.display='none';n.textContent='The launch is under way in Bangkok.';return;}
